@@ -134,8 +134,8 @@ Library: lib_burst_generated
 --debug=Full
 --output=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
---root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
+--root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\LunarConsole.dll
 --root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=D:\UnityProjects\Distributed_Piano\Distributed Piano\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll

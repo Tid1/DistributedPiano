@@ -69,14 +69,30 @@
                 int messageLength = BinaryPrimitives.ReadInt32BigEndian(messageLengthArr);
 
                 byte[] data = new byte[messageLength];
+                int bytesRead = 0;
+                while (bytesRead < messageLength)
+                {
+                    int read = stream.Read(data, bytesRead, messageLength - bytesRead);
+                    if (read == 0)
+                    {
+                        //throw new IOException("Connection closed");
+                        break;
+                    }
+                    bytesRead += read;
+                }
+
+                OSCMessage receivedMessage = (OSCMessage)OSCPacket.FromByteArray(data);
+                Debug.Log("Read Message Num Bytes: " + bytesRead);
+                OnReceive?.Invoke(receivedMessage, serverEndpoint);
+                /*
                 int messageNumBytes = stream.Read(data, 0, messageLength);
                 Debug.Log("Read Message Num Bytes: " + messageNumBytes);
                 if (messageNumBytes > 0) {
                     OSCMessage receivedMessage = (OSCMessage) OSCPacket.FromByteArray(data);
                     Debug.Log("Message Address: " + receivedMessage.Address);
                     OnReceive?.Invoke(receivedMessage, serverEndpoint);   
-                }
-            }
+                }*/
+            } 
         }
 
         /*
